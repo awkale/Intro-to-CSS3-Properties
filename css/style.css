@@ -1,6 +1,6 @@
 /* Reset */
 
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
 	margin:0;
 	padding:0;
 }
@@ -8,7 +8,7 @@ table {
 	border-collapse:collapse;
 	border-spacing:0;
 }
-fieldset,img { 
+fieldset,img {
 	border:0;
 }
 address,caption,cite,code,dfn,em,strong,th,var {
@@ -128,7 +128,7 @@ body {
 /* main content */
 
 #content #main {
-	/* 
+	/*
 	  I could have achieved a similar effect with the 'opacity' property,
 	  but then all the children would have had an opacity of .9, as well.
 	  Note that this won't work in ie8 and below.
@@ -286,7 +286,44 @@ body {
 #listings-container .listing-details .bed_bath {
 	float: right;
 }
+#listings-container .listing {
+	-webkit-transition: all .5s ;
+	-moz-transition: all .5s ;
+	transition: all .5s ;
+	border-radius: 10px;
+	box-shadow: 3px 3px 5px 1px #666666;
+}
+.photo-container {
+	border-radius: 10px 10px 0 0;
+}
+#listings-container .photo-container img {
+	border-radius: inherit;
+}
+#listings-container .listing-details {
+	box-shadow: inset 1px 1px 9px 5px #ebebeb;
+	border-radius: 0 0 10px 10px;
+}
+.listing a.overlay {
+	display: none;
+}
+#listings-container .listing:hover a {
+	display: block;
+	background-color: rgba(113,113,113,0.56);
+	color: #ffffff;
+	position: absolute;
+	top: 0;
+	border-radius: inherit;
+	line-height: 5em;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	font-size: 2em;
+}
+#listings-container .listing:hover {
+	box-shadow: 15px 15px 10px 2px #666666;
 
+}
 /* clearfix class */
 
 .clearfix:after {
